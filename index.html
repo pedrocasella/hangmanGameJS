@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>HangmanGame Offline</title>
+</head>
+<body>
+    <section class="config-game" id="config-game">
+        <center>
+            <h1>Jogo da Forca</h1>
+            <center><h3>Jogar com amigos</h3></center>
+            <form id="config-form">
+                <label id="label-word">Palavra ou frase aqui</label><br>
+                <input type="text" name="word" id="word-input" placeholder="Word or phrase" autocomplete="off" required><br><br>
+                <label>Dica</label><br>
+                <input type="text" name="" id="tip-input" placeholder="Tip" autocomplete="off"><br>
+                
+            </form>
+            <button id="play-button">Jogar </button>
+        </center>
+        <center><h3>Modo Solo</h3></center>
+        <center><button id="solo-mode">Um jogador</button></center>
+    </section>
+    <div class="background-config"></div>
+    <section class="game-display" id="game-display">
+        <div class="gibbet" id="gibbet">
+            <div class="head" id="head"></div>
+            <div class="body" id="body"></div>
+            <div class="arm-left" id="arm-left"></div>
+            <div class="arm-right" id="arm-right"></div>
+            <div class="leg-right" id="leg-right"></div>
+            <div class="leg-left" id="leg-left"></div>
+        </div>
+        <center><h2 id="word-write"></h2></center>
+        <center><span id="tip-area"></span></center>
+        <center>
+        <div class="alphabet-div">
+            <ul class="alphabet" id="alphabet">
+                <li id="a" class="letter"><span>a</span></li>
+                <li id="b" class="letter"><span>b</span></li>
+                <li id="c" class="letter"><span>c</span></li>
+                <li id="d" class="letter"><span>d</span></li>
+                <li id="e" class="letter"><span>e</span></li>
+                <li id="f" class="letter"><span>f</span></li>
+                <li id="g" class="letter"><span>g</span></li>
+                <li id="h" class="letter"><span>h</span></li>
+                <li id="i" class="letter"><span>i</span></li>
+                <li id="j" class="letter"><span>j</span></li>
+                <li id="k" class="letter"><span>k</span></li>
+                <li id="l" class="letter"><span>l</span></li>
+                <li id="m" class="letter"><span>m</span></li>
+                <li id="n" class="letter"><span>n</span></li>
+                <li id="o" class="letter"><span>o</span></li>
+                <li id="p" class="letter"><span>p</span></li>
+                <li id="q" class="letter"><span>q</span></li>
+                <li id="r" class="letter"><span>r</span></li>
+                <li id="s" class="letter"><span>s</span></li>
+                <li id="t" class="letter"><span>t</span></li>
+                <li id="u" class="letter"><span>u</span></li>
+                <li id="v" class="letter"><span>v</span></li>
+                <li id="w" class="letter"><span>w</span></li>
+                <li id="x" class="letter"><span>x</span></li>
+                <li id="y" class="letter"><span>y</span></li>
+                <li id="z" class="letter"><span>z</span></li>
+            </ul>
+        </div>
+        <center><button id="quit">Sair da Partida</button></center>
+        </center>
+    </section>
+    <script src="./script/app.js"></script>
+</body>
+</html>

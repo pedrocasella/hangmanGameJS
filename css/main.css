@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    color: white;
+}
+
+/* Animations */
+    /*Win*/
+
+    @keyframes win {
+        0%{
+            color: #ffffff;
+        }
+
+        50%{
+            color: #6fc51f;
+        }
+
+        100%{
+            color: #ffffff;
+        }
+    }
+
+    /* Lose */
+
+    @keyframes lose {
+        0%{
+            color: #ffffff;
+        }
+
+        50%{
+            color: #da2626;
+        }
+
+        100%{
+            color: #ffffff;
+        }
+    }
+
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31, 31, 31);
+}
+
+.background-config{
+    position: absolute;
+    background-image: url('https://p4.wallpaperbetter.com/wallpaper/301/853/148/forest-cemetery-pumpkin-horror-wallpaper-preview.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: .2;
+}
+
+.config-game{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.config-game h1{
+    margin: 2rem;
+    font-size: 30pt;
+}
+
+.config-game form{
+    margin: 2rem;
+}
+
+.config-game form input{
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    border-style: none;
+    margin: .5rem;
+    padding: .1rem;
+    color: rgb(0, 0, 0);
+}
+
+.config-game #play-button{
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    border-style: none;
+    color: #000000;
+    margin: .5rem 0rem 3rem 0rem;
+    background-image: url(./../img/multiplayer-icon.png);
+    background-size: 20px;
+    background-position-x: 70%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    font-weight: bolder;
+}
+
+.config-game #play-button:hover{
+    transition: linear .3s;
+    cursor: pointer;
+    background-color: #ffcbcb;
+}
+
+
+.config-game #solo-mode{
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    border-style: none;
+    color: #ffffff;
+    background-color: #000000;
+    margin: 1rem;
+    font-weight: bolder;
+    background-image: url(./../img/solo-icon.png);
+    background-size: 20px;
+    background-position-x: 80%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
+
+.config-game #solo-mode:hover{
+    transition: linear .3s;
+    cursor: pointer;
+    background-color: #181818;
+}
+
+#word-write{
+    animation: none;
+}
+
+/* Tip */
+
+#tip-area{
+    color: white;
+    font-weight: bold;
+    margin-top: .5rem;
+}
+
+/* Alphabet */
+
+.game-display{
+    display: none;
+}
+
+.game-display .alphabet-div{
+    width: 500px;
+    margin: 2rem;
+    
+}
+
+.game-display .alphabet-div .alphabet{
+    list-style: none;
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+.game-display .alphabet-div .alphabet li{
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    border-radius: 9px;
+    background-color: #ffffff;
+    margin: .5rem;
+    background: linear-gradient(315deg, #e6e6e6, #ffffff);
+}
+
+.game-display .alphabet-div .alphabet li:hover{
+    cursor: pointer;
+}
+
+.game-display .alphabet-div .alphabet li:active{
+    transition: linear .3s;
+    cursor: default;
+    transform: scale(85%);
+}
+
+.game-display .alphabet-div .alphabet li span{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    margin: .8rem;
+}
+
+/* Gibbet */
+
+.game-display .gibbet{
+    width: 140px;
+    height: 200px;
+    background-image: url(./../img/gibbet.png);
+    background-position: center;
+    background-size: cover;
+    transform: translate(28rem, 1rem);
+}
+
+.game-display .head{
+    width: 200px;
+    height: 200px;
+    background-image: url(./../img/head.png);
+    background-position: center;
+    background-size: cover;
+    transform: translate(-1.8rem, 0rem);
+    display: none;
+}
+
+.game-display .body{
+    width: 200px;
+    height: 200px;
+    background-image: url(./../img/body.png);
+    background-position: center;
+    background-size: cover;
+    transform: translate(-1.8rem, -12.5rem);
+    display: none;
+}
+
+.game-display .arm-left{
+    width: 200px;
+    height: 200px;
+    background-image: url(./../img/arm-left.png);
+    background-position: center;
+    background-size: cover;
+    transform: translate(-1.6rem, -25rem);
+    display: none;
+}
+
+.game-display .arm-right{
+    width: 200px;
+    height: 200px;
+    background-image: url(./../img/arm-right.png);
+    background-position: center;
+    background-size: cover;
+    transform: translate(-2rem, -37.5rem);
+    display: none;
+}
+
+.game-display .leg-right{
+    width: 200px;
+    height: 200px;
+    background-image: url(./../img/leg-right.png);
+    background-position: center;
+    background-size: cover;
+    transform: translate(-1.9rem, -50rem);
+    display: none;
+}
+
+.game-display .leg-left{
+    width: 200px;
+    height: 200px;
+    background-image: url(./../img/leg-left.png);
+    background-position: center;
+    background-size: cover;
+    transform: translate(-1.8rem, -62.5rem);
+    display: none;
+}
+
+/* Quit */
+
+#quit{
+    width: 200px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #000000;
+    background-image: url(./../img/exit.png);
+    background-size: 20px;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
+
+#quit:hover{
+    transition: linear .3s;
+    cursor: pointer;
+    background-color: #bdbdbd;
+}
+
+/*Configuration for small dispositives */
+
+@media screen and (max-width: 768px){
+    *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        overflow-x: hidden;
+    }
+
+    .game-display .alphabet-div{
+        width: 300px;
+        margin: 2rem;
+        
+    }
+
+    .game-display .alphabet-div .alphabet li span{
+        margin: .9rem;
+    }
+
+    /* Gibbet */
+
+    .game-display .gibbet{
+        width: 140px;
+        height: 200px;
+        background-image: url(./../img/gibbet.png);
+        background-position: center;
+        background-size: cover;
+        transform: translate(2rem, 1rem);
+        overflow: hidden;
+    }
+
+    .game-display .head{
+        width: 200px;
+        height: 200px;
+        background-image: url(./../img/head.png);
+        background-position: center;
+        background-size: cover;
+        transform: translate(-1.8rem, 0rem);
+        display: none;
+    }
+
+    .game-display .body{
+        width: 200px;
+        height: 200px;
+        background-image: url(./../img/body.png);
+        background-position: center;
+        background-size: cover;
+        transform: translate(-1.8rem, -12.5rem);
+        display: none;
+    }
+
+    .game-display .arm-left{
+        width: 200px;
+        height: 200px;
+        background-image: url(./../img/arm-left.png);
+        background-position: center;
+        background-size: cover;
+        transform: translate(-1.6rem, -25rem);
+        display: none;
+    }
+
+    .game-display .arm-right{
+        width: 200px;
+        height: 200px;
+        background-image: url(./../img/arm-right.png);
+        background-position: center;
+        background-size: cover;
+        transform: translate(-2rem, -37.5rem);
+        display: none;
+    }
+
+    .game-display .leg-right{
+        width: 200px;
+        height: 200px;
+        background-image: url(./../img/leg-right.png);
+        background-position: center;
+        background-size: cover;
+        transform: translate(-1.9rem, -50rem);
+        display: none;
+    }
+
+    .game-display .leg-left{
+        width: 200px;
+        height: 200px;
+        background-image: url(./../img/leg-left.png);
+        background-position: center;
+        background-size: cover;
+        transform: translate(-1.8rem, -62.5rem);
+        display: none;
+    }
+}
