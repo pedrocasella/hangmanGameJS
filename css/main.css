@@ -277,6 +277,16 @@ body{
     background-color: #bdbdbd;
 }
 
+/* Rights */
+
+.rights{
+    position: absolute;
+    font-size: 7pt;
+    bottom: 1rem;
+    transform: translateX(-8.5rem);
+    z-index: 4;
+}
+
 /*Configuration for small dispositives */
 
 @media screen and (max-width: 768px){
@@ -365,5 +375,15 @@ body{
         background-size: cover;
         transform: translate(-1.8rem, -62.5rem);
         display: none;
+    }
+
+    /* Rights */
+
+    .rights{
+        position: absolute;
+        font-size: 7pt;
+        bottom: 2rem;
+        transform: translateX(-6rem);
+        z-index: 4;
     }
 }
